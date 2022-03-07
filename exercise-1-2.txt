@@ -1,0 +1,7 @@
+MacBook-Pro:~ anttihalmetoja$ docker ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+MacBook-Pro:~ anttihalmetoja$ 
+
+MacBook-Pro:~ anttihalmetoja$ docker images
+REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
+MacBook-Pro:~ anttihalmetoja$ 
