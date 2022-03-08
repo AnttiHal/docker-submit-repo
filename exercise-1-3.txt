@@ -1,0 +1,6 @@
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+
+commands:
+docker run -it devopsdockeruh/simple-web-service:ubuntu
+docker exec -it epic_bose bash
+tail -f ./text.log
