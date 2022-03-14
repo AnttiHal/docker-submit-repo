@@ -7,4 +7,4 @@ RUN apt-get update && apt-get install -y  curl
 COPY file.sh .
 
 RUN chmod +x file.sh
-CMD ./file.sh
+ENTRYPOINT ["./file.sh"]
