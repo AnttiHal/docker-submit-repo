@@ -1,0 +1,4 @@
+command:
+docker-compose up --scale compute=5
+
+I know this is the correct command but for some reason the application itself didn't work, it couldn't get server connected. 
