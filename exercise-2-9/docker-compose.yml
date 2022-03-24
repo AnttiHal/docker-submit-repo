@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+    db:
+          image: postgres
+          restart: unless-stopped
+          environment:
+             POSTGRES_PASSWORD: postgres
+          volumes:
+            - ./database:/var/lib/postgresql/data    
+    frontend:
+        image: frontend
+        ports:
+        - 5000:5000
+
+    backend:
+        image: backend
+        ports:
+        - 8080:8080
+        environment:
+          - REDIS_HOST=redis
+          - POSTGRES_HOST=db
+          - POSTGRES_PASSWORD=postgres
+    redis:
+        image: redis
+
+volumes:
+  database:
