@@ -1,0 +1,4 @@
+I added these lines to both backend- and frontend-files:
+RUN useradd -m appuser
+USER appuser
+
