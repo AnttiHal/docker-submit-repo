@@ -8,9 +8,11 @@ ENV REACT_APP_BACKEND_URL=http://localhost:8080
 
 COPY . .
 
-RUN npm install && npm run build && npm install -g serve && useradd -m appuser
+RUN npm install && npm run build && \
+    npm install -g serve && \
+    useradd -m appuser
 
-COPY . .
+COPY . . 
 
 USER appuser
 

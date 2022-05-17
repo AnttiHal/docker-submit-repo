@@ -9,10 +9,9 @@ COPY . .
 ENV REQUEST_ORIGIN=http://localhost:5000
 
 
-RUN useradd -m appuser
+RUN useradd -m appuser && \
+    rm -rf /var/lib/apt/lists/* && go build
 
-USER appuser
 
-RUN go build
 
 CMD ["./server"]

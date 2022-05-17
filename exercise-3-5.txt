@@ -1,0 +1,12 @@
+Sizes before change
+frontend: 456.09MB
+backend: 602.02MB
+
+Sizes with node and golang images:
+backend:1.07GB
+frontend:1.17GB
+
+sizes with alpine:
+
+backend:
+frontend:

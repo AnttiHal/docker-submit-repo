@@ -1,0 +1,7 @@
+Sizes before changes
+frontend: 501.19MB
+backend: 776.49MB
+
+After
+frontend: 456.09MB
+backend: 602.02MB
