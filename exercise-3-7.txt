@@ -1,0 +1,42 @@
+kurkkumopo-frontend optimizing
+
+SIZES
+before optimizing: 2.69GB
+after optimizing: 305.99MB
+ changed to alpine, added user, glued run-commands
+
+
+BEFORE:
+
+FROM node:12.16.2
+
+WORKDIR /usr/src/app
+
+COPY . .
+
+RUN npm ci
+
+RUN npm run build
+RUN npm install -g serve
+
+EXPOSE 3000
+
+CMD ["serve", "-s", "-l", "3000", "build"]
+
+
+
+
+After:
+
+
+FROM alpine
+
+WORKDIR /usr/src/app
+
+COPY . .
+
+RUN apk add --no-cache nodejs npm && npm ci && npm run build && npm install - serve && adduser -D appuser
+EXPOSE 3000
+USER appuser
+
+CMD ["serve", "-s", "-l", "3000", "build"]
